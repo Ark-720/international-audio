@@ -50,7 +50,8 @@
         <iframe id="iframelink" allowtransparency="true" frameborder="0"></iframe>
         <div class="iframe_close"></div>
     </div>
-    <audio id="music" loop autoplay></audio>
+    <!-- <audio id="music" loop autoplay></audio> -->
+    <!-- <audio id="musicEng" loop></audio> -->
     <div id="viewport">
         <div class="zPic"></div>
         <a class="logo" href="../index.html"></a>
@@ -162,8 +163,16 @@
     <script src="E2.0/js/libs/three1.js"></script>
     <script src="E2.0/js/plugin/swiper.min.js"></script>
     <script data-main="E2.0/js/preload" src="E2.0/js/plugin/require.js"></script>
+    <audio controls id="audioEng">
+        <source src="./Uploads/Models/1633/1535959169570/Image/longquan.m4a" type='audio/mp3'>
+    </audio>
+    <audio controls id="audioDefault">
+        <source src="./Uploads/Models/1633/1535959169570/Image/music.mp3" type='audio/mp3'>
+    </audio>
 
     <script>
+        $('#audioDefault')[0].play();
+
         $(".tips>img").click(function () {
             if (this.src.indexOf("tips.png") != -1) {
                 this.src = "image/close.png";
@@ -171,7 +180,6 @@
             } else {
                 this.src = "image/tips.png";
                 $(".details").css("display", "none")
-
             }
         })
 
@@ -182,6 +190,8 @@
             $('.details-eng').css({
                 'display': 'none'
             });
+            $('#audioEng')[0].pause();
+            $('#audioDefault')[0].play();
         });
         $('.col2-btn').click(function () {
             $('.details-eng').css({
@@ -190,6 +200,8 @@
             $('.details').css({
                 'display': 'none'
             });
+            $('#audioEng')[0].play();
+            $('#audioDefault')[0].pause();
         });
     </script>
 </body>

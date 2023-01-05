@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta charset="UTF-8" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8"
+        content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>青玉帶鉤</title>
     <script>
         var isMobile = function () {
@@ -25,119 +28,179 @@
         var sceneBGFilePath = "Uploads/Models/1633/1537607029216/sceneBG.json";
         var sceneGlobalFilePath = "Uploads/Models/1633/1537607029216/sceneGlobal.json";
         var animationFilePath = "Uploads/Models/1633/1537607029216/animationData.json";
-        if(mobileDevice){
+        if (mobileDevice) {
             document.write("<link rel='stylesheet' href='c/css/cMobile.css'>");
 
-        }else{
+        } else {
             document.write("<link rel='stylesheet' href='c/css/c.css'>");
         }
     </script>
 </head>
+
 <body style="background-color: rgba(0,0,0,0);">
 
-<!-- 作品浏览 -->
-<div class="maskdiv"></div>
-<div class="enter">
-    <div id="enter" class="task_orders btn btn-default">
-        进入场景
-    </div>
-</div>
-<div class="iframeContent">
-    <iframe id="iframelink" allowtransparency="true" frameborder="0"></iframe>
-    <div class="iframe_close"></div>
-</div>
-<audio id="music" loop autoplay></audio>
-<div id="viewport">
-    <div class="zPic"></div>
-    <a class="logo" href="../index.html"></a>
-    <div class="butList" id="butList">
-        <div id="fullbut">
-            <div class="but fullbut"></div>
-        </div>
-        <div id="nofull" style="display: none">
-            <div class="but nofull"></div>
-        </div>
-        <div id="vrbut">
-            <div class="but novr"></div>
-        </div>
-        <div id="mtlbut">
-            <div class="but ismtl"></div>
-        </div>
-        <div id="labelbut">
-            <div class="but islabel"></div>
-        </div>
-        <div id="personal">
-            <div class="but personal"></div>
-        </div>
-        <div id="rotate">
-            <div class="but rotate"></div>
-        </div>
-        <div id="Gyro">
-            <div class="but Gyro"></div>
+    <!-- 作品浏览 -->
+    <div class="maskdiv"></div>
+    <div class="enter">
+        <div id="enter" class="task_orders btn btn-default">
+            进入场景
         </div>
     </div>
-    <div id="exitVR"></div>
-    <div id="loading">
-        <div class="loader">
-            <div class="inner one"></div>
-            <div class="inner two"></div>
-            <div class="inner three"></div>
-            <div class="inner loaderFont">加载中...</div>
-        </div>
+    <div class="iframeContent">
+        <iframe id="iframelink" allowtransparency="true" frameborder="0"></iframe>
+        <div class="iframe_close"></div>
     </div>
-    <div class="perspnalbut" id="perspnalbut"></div>
-    <div class="butList" id="perspnallist">
-        <div id="saveperspnal">
-            <div class="saveperspnal"></div>
-            <div>保存</div>
+    <div id="viewport">
+        <div class="zPic"></div>
+        <a class="logo" href="../index.html"></a>
+        <div class="butList" id="butList">
+            <div id="fullbut">
+                <div class="but fullbut"></div>
+            </div>
+            <div id="nofull" style="display: none">
+                <div class="but nofull"></div>
+            </div>
+            <div id="vrbut">
+                <div class="but novr"></div>
+            </div>
+            <div id="mtlbut">
+                <div class="but ismtl"></div>
+            </div>
+            <div id="labelbut">
+                <div class="but islabel"></div>
+            </div>
+            <div id="personal">
+                <div class="but personal"></div>
+            </div>
+            <div id="rotate">
+                <div class="but rotate"></div>
+            </div>
+            <div id="Gyro">
+                <div class="but Gyro"></div>
+            </div>
         </div>
-        <div id="exitperspnal">
-            <div class="exitperspnal"></div>
-            <div>退出</div>
+        <div id="exitVR"></div>
+        <div id="loading">
+            <div class="loader">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+                <div class="inner loaderFont">加载中...</div>
+            </div>
         </div>
-    </div>
-    <div class="tips"><img src="image/tips.png" style="height: 70%;margin-top: 10px"></div>
+        <div class="perspnalbut" id="perspnalbut"></div>
+        <div class="butList" id="perspnallist">
+            <div id="saveperspnal">
+                <div class="saveperspnal"></div>
+                <div>保存</div>
+            </div>
+            <div id="exitperspnal">
+                <div class="exitperspnal"></div>
+                <div>退出</div>
+            </div>
+        </div>
+        <div class="tips"><img src="image/tips.png" style="height: 70%;margin-top: 10px"></div>
 
-</div>
-<div class="details">
-    <div class="title">青玉帶鉤</div>
-    <div class="bianhao"><img src="image/id.png">S001</div>
-    <div class="content">
-        <p>
-            帶鉤是古代男子用來繫腰帶的掛鉤，早在春秋戰國時期就是一種十分普遍的服裝配飾，也是彰顯身份地位的象徵，不僅材質與形制非常多樣，雕刻與裝飾紋樣更是多彩多姿。到了元明清三代，除了實用性的帶鉤之外，出現了大量以把玩觀賞為主的玉質帶鉤，這些帶鉤造型優美、玲瓏奇巧，展現出極為精緻的工藝之美。
-        </p>
-        <p>
-            這件青玉帶鉤出土於甘肅省徐家坪8號墓，為元朝時期的作品，青玉包涵的色彩層次極為豐富，從白玉中帶有青灰色，到深青灰色中帶有黑斑的種類都有，這件作品呈現青灰色帶有黃褐色斑的質地，一端為龍首裝飾，另一端為浮雕螭紋，螭身呈現彎曲爬行狀，四足凌空，神采奕奕，整體線條顯得自然而流暢，充分表現出玉質的溫潤，是一件高貴典雅的上乘之作。
-        </p>
     </div>
-    <div style="background: #9F8262;width: 80%;margin: 0 auto;padding: 10px;border-radius: 10px;">藏館地址：</div>
-    <div style= "background: #9F8262;width: 80%;margin: 0 auto;padding: 10px;border-radius: 10px;margin-top: 10px">出土年代：</div>
-    <div style= "background: #9F8262;width: 80%;margin: 0 auto;padding: 10px;border-radius: 10px;margin-top: 10px">出土地：</div>
+    <div class="details">
+        <div class="title">青玉帶鉤</div>
+        <div style="width: 80%;margin: 5px auto;height: 50px;">
+            <div class="col1-btn">中文</div>
+            <div class="col2-btn">English</div>
+        </div>
+        <div class="bianhao"><img src="image/id.png">S002</div>
+        <div class="content">
+            <p>
+                帶鉤是古代男子用來繫腰帶的掛鉤，早在春秋戰國時期就是一種十分普遍的服裝配飾，也是彰顯身份地位的象徵，不僅材質與形制非常多樣，雕刻與裝飾紋樣更是多彩多姿。到了元明清三代，除了實用性的帶鉤之外，出現了大量以把玩觀賞為主的玉質帶鉤，這些帶鉤造型優美、玲瓏奇巧，展現出極為精緻的工藝之美。
+            </p>
+            <p>
+                這件青玉帶鉤出土於甘肅省徐家坪8號墓，為元朝時期的作品，青玉包涵的色彩層次極為豐富，從白玉中帶有青灰色，到深青灰色中帶有黑斑的種類都有，這件作品呈現青灰色帶有黃褐色斑的質地，一端為龍首裝飾，另一端為浮雕螭紋，螭身呈現彎曲爬行狀，四足凌空，神采奕奕，整體線條顯得自然而流暢，充分表現出玉質的溫潤，是一件高貴典雅的上乘之作。
+            </p>
+        </div>
+        <div style="background: #9F8262;width: 80%;margin: 0 auto;padding: 10px;border-radius: 10px;">藏館地址：</div>
+        <div style="background: #9F8262;width: 80%;margin: 0 auto;padding: 10px;border-radius: 10px;margin-top: 10px">
+            出土年代：</div>
+        <div style="background: #9F8262;width: 80%;margin: 0 auto;padding: 10px;border-radius: 10px;margin-top: 10px">
+            出土地：</div>
 
-    <div style="width: 80%;margin: 0 auto;margin-top: 10px">
-        <div class="col1">高：</div>
-        <div class="col2">重量：</div>
+        <div style="width: 80%;margin: 0 auto;margin-top: 10px">
+            <div class="col1">高：</div>
+            <div class="col2">重量：</div>
+        </div>
+        <div style="height: 52px"></div>
     </div>
-    <div style="height: 52px"></div>
-</div>
-<script type="text/javascript" src="E2.0/js/plugin/jquery-2.1.1.js"></script>
-<script type="text/javascript" src="E2.0/js/plugin/touch-0.2.14.min.js"></script>
-<script src="E2.0/js/libs/three1.js"></script>
-<script src="E2.0/js/plugin/swiper.min.js"></script>
-<script data-main="E2.0/js/preload" src="E2.0/js/plugin/require.js"></script>
+    <div class="details-eng">
+        <div class="title">The belt hook</div>
+        <div style="width: 80%;margin: 5px auto;height: 50px;">
+            <div class="col1-btn">中文</div>
+            <div class="col2-btn">English</div>
+        </div>
+        <div class="bianhao"><img src="image/id.png">S002</div>
+        <div class="content">
+            <p>
+                The belt hook is a hook used by ancient men to tie their belts. As early as the Spring and Autumn and
+                Warring States Periods, it was a very common clothing accessory and a symbol of status. Not only are the
+                materials and shapes are very diverse, but also the carvings and decorative patterns are colorful. In
+                the Yuan, Ming and Qing dynasties, in addition to practical belt hooks, a large number of jade belt
+                hooks mainly for play and appreciation appeared. These belt hooks are beautiful in shape, exquisite and
+                ingenious, showing the beauty of extremely exquisite craftsmanship.
+            </p>
+            <p>
+                This sapphire belt hook was unearthed from Tomb No. 8 in Xujiaping, Gansu Province. It is a work of the
+                Yuan Dynasty. The sapphire contains extremely rich color levels, ranging from bluish-gray in white jade
+                to dark bluish-gray with black spots. This piece of work presents a blue-gray texture with yellow-brown
+                texture. One end is decorated with a dragon head, and the other end is embossed with a chi pattern. The
+                warmth and moistness of jade is a noble and elegant work.
+            </p>
+        </div>
+        <div style="height: 52px"></div>
+    </div>
+    <script type="text/javascript" src="E2.0/js/plugin/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="E2.0/js/plugin/touch-0.2.14.min.js"></script>
+    <script src="E2.0/js/libs/three1.js"></script>
+    <script src="E2.0/js/plugin/swiper.min.js"></script>
+    <script data-main="E2.0/js/preload" src="E2.0/js/plugin/require.js"></script>
+    <audio controls id="audioEng">
+        <source src="./Uploads/Models/1633/1537607029216/Image/hook.mp3" type='audio/mp3'>
+    </audio>
+    <audio controls id="audioDefault">
+        <source src="./Uploads/Models/1633/1537607029216/Image/music.mp3" type='audio/mp3'>
+    </audio>
 
-<script>
-    $(".tips>img").click(function () {
-        if(this.src.indexOf("tips.png")!=-1){
-            this.src="image/close.png";
-            $(".details").css("display","block")
-        }else{
-            this.src="image/tips.png";
-            $(".details").css("display","none")
+    <script>
+        $('#audioDefault')[0].play();
 
-        }
-    })
-</script>
+        $(".tips>img").click(function () {
+            if (this.src.indexOf("tips.png") != -1) {
+                this.src = "image/close.png";
+                $(".details").css("display", "block")
+            } else {
+                this.src = "image/tips.png";
+                $(".details").css("display", "none")
+            }
+        })
+
+        $('.col1-btn').click(function () {
+            $('.details').css({
+                'display': 'block'
+            });
+            $('.details-eng').css({
+                'display': 'none'
+            });
+            $('#audioEng')[0].pause();
+            $('#audioDefault')[0].play();
+        });
+        $('.col2-btn').click(function () {
+            $('.details-eng').css({
+                'display': 'block'
+            });
+            $('.details').css({
+                'display': 'none'
+            });
+            $('#audioEng')[0].play();
+            $('#audioDefault')[0].pause();
+        });
+    </script>
 </body>
-</html>
 
+</html>
