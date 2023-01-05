@@ -1,0 +1,149 @@
+html, body {
+    position: relative;
+    height: 100%;
+    background-color: #3E3032;
+}
+body {
+    background-color: #3E3032;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color:#fff;
+    opacity: 1;
+    background: rgba(159,130,98,0.5);
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.swiper-pagination-bullet-active {
+    color:#fff;
+    background:rgba(159,130,98,1);
+    transform: scale(1.3);
+}
+
+
+.title{
+    /* position: absolute; */
+    color: white;
+    /* top: 30px; */
+    font-size: 28px;
+}
+.link{
+    position: absolute;
+    bottom: 55px;
+    background: #9F8262;
+    width: 80%;
+    color: white;
+    padding: 9px;
+    border-radius: 9px;
+}
+.link>a{
+    text-decoration: none;
+    color: white;
+}
+
+.item3{
+    width: 80%;
+}
+
+@media (max-width:900px) {
+    .link{
+        position: absolute;
+        bottom: 100px;
+        background: #9F8262;
+        width: 80%;
+        color: white;
+        padding: 9px;
+        border-radius: 9px;
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color:#fff;
+        opacity: 1;
+        background: rgba(159,130,98,0.5);
+        margin: 5px 10px;
+    }    
+.title-out{
+    top: 30px;
+    position: absolute;
+}
+
+}
+
+
+.black{
+    color: black;
+    background-color: black;
+    z-index: 99;
+    width: 5%;
+    height: 8vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.black-2{
+    color: black;
+    background-color: black;
+    z-index: 99;
+    width: 5%;
+    height: 8vh;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:1024px) {
+    .black {
+        display: none;
+    }
+    .black-2{
+        display: none;
+    }
+}
+
+.black {
+    display: none !important;
+}
+.black-2{
+    display: none !important;
+}
