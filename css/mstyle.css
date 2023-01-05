@@ -60,7 +60,7 @@ body {
 
 .link{
     position: absolute;
-    bottom: 55px;
+    bottom: 30px;
     background: #9F8262;
     width:150px;
     color: white;
@@ -74,4 +74,3 @@ body {
 .item3{
     width: 58%;
 }
-
