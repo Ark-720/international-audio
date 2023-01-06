@@ -1138,11 +1138,11 @@ body,html{
     display: block;
 }
 
-@media (max-width:900px) {
+/* @media (max-width:900px) {
     .details {
         display: none;
     }
-}
+} */
 
 .details-1{
     width: 100%;
