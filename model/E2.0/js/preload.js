@@ -158,7 +158,7 @@ require(['tween','lib'], function() {
                             rAF = requestAnimationFrame(animate2);
                         }
                         if (sMusic.src) {
-                            sMusic.play();
+                            sMusic.pause();
                         }
                     });
                     $("#enter").click(function () {
@@ -168,21 +168,21 @@ require(['tween','lib'], function() {
                         sIframeContent.toggle();
                         document.getElementById("iframelink").src = "http://";
                         if (sMusic.src) {
-                            sMusic.play();
+                            sMusic.pause();
                         }
                     });
                     if (sMusic.src) {
-                        sMusic.play();
+                        sMusic.pause();
                     }
                     if (mobileDevice) {
                         $("html").one("touchstart", function () {
                             if (sMusic.src) {
-                                sMusic.play();
+                                sMusic.pause();
                             }
                         });
                         $("body").one("touchstart", function () {
                             if (sMusic.src) {
-                                sMusic.play();
+                                sMusic.pause();
                             }
                         });
                     }
