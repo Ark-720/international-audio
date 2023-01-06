@@ -1175,3 +1175,33 @@ body,html{
     padding: 10px;
     right: -8px
 }
+
+.col1-btn{
+    padding:10px 0;
+    left:-11px;
+    width: 45%;
+    position: relative;
+    float: left;
+    background: #9F8262;
+    border-radius: 10px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.col2-btn{
+    width: 43%;
+    position: relative;
+    float: right;
+    background: #9F8262;
+    border-radius: 10px;
+    padding: 10px;
+    right: -8px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.col1-btn:hover, .col2-btn:hover {
+    background-color: #7a5e3f;
+}
