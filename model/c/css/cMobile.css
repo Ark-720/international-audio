@@ -1127,7 +1127,7 @@ body,html{
      height: 100px;
      background: #9F8262;
  }
-.details{
+.details, .details-eng{
     background:rgba(61,49,51,1);
     opacity:0.9;
     width: 100%;
@@ -1140,21 +1140,21 @@ body,html{
     display: none;
 
 }
-.details>.title{
+.details>.title, .details-eng>.title{
     padding-top: 26px;
     padding-left: 30px;
     padding-bottom: 11px;
     font-size: 21px;
     font-weight: bold;
 }
-.details>.bianhao{
+.details>.bianhao, .details-eng>.bianhao{
     padding-left: 30px;
 }
-.details>.bianhao>img{
+.details>.bianhao>img, .details-eng>.bianhao>img{
     width: 17px;
     margin-right: 7px;
 }
-.details>.content{
+.details>.content, .details-eng>.content{
     padding: 0 26px 0 30px;
 }
 .col1{
