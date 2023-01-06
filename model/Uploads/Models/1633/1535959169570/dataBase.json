@@ -189,11 +189,7 @@
     "cShow": 0,
     "Mirror": {},
     "music": {
-        "src": "./Uploads/Models/1633/1535959169570/Image/music.mp3",
-        "open": true
-    },
-    "musicEng": {
-        "src": "./Uploads/Models/1633/1535959169570/Image/longquan.m4a",
+        "src": ["./Uploads/Models/1633/1535959169570/Image/music.mp3","./media/cup.mp3"],
         "open": true
     },
     "sidebar": {
