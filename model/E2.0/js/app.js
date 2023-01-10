@@ -1313,48 +1313,6 @@ $("#rotate").click(function () {
     }
 
 })
-// 切換語言
-$("#languageE").click(function () {
-    $('#languageC').css({
-        'display': 'block'
-    });
-    $('#languageE').css({
-        'display': 'none'
-    });
-    $('.details-eng').css({
-        'display': 'block'
-    });
-    $('.details-ch').css({
-        'display': 'none'
-    });
-    $('#audioEng')[0].play()
-    $('#audioDefault')[0].pause()
-    if (this.src.indexOf("tips.png") != -1) {
-        this.src = "image/close.png";
-        $(".details").css("display", "block")
-    } else {
-        this.src = "image/tips.png";
-        $(".details").css("display", "none")
-    }
-})
-
-$("#languageC").click(function () {
-    $('#languageE').css({
-        'display': 'block'
-    });
-    $('#languageC').css({
-        'display': 'none'
-    });
-    $('#audioEng')[0].pause()
-    $('#audioDefault')[0].play()
-    if (this.src.indexOf("tips.png") != -1) {
-        this.src = "image/close.png";
-        $(".details").css("display", "block")
-    } else {
-        this.src = "image/tips.png";
-        $(".details").css("display", "none")
-    }
-});
 
 MtlBut.addEventListener('click', swtichMusic, false);
 

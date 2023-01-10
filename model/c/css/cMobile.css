@@ -163,13 +163,13 @@ html {
 .languageE {
     margin-top: 15px;
     background: url("../../image/lanE.png");
-    background-size: contain;
+    background-size: contain !important;
     display: none;
 }
 
 .languageC {
     margin-top: 15px;
-    background-size: contain;
+    background-size: contain !important;
     background: url("../../image/lanc.png");
 }
 
@@ -1257,7 +1257,7 @@ html {
     background: #9F8262;
 }
 
-.details-ch {
+.details-eng {
     display: none;
 }
 
