@@ -146,19 +146,26 @@
             <div class="bianhao"><img src="image/id.png">S001</div>
             <div class="content">
                 <p>
-                    Longquan ware was produced in southern China's Zhejiang province. In particular, Longquan celadon–– pure
+                    Longquan ware was produced in southern China's Zhejiang province. In particular, Longquan celadon––
+                    pure
                     and lustrous greenware––is famous worldwide. Thanks to excellent geological conditions and
                     well-developed water transport, the area has had a long history of porcelain production. For several
-                    hundred years, from the Song dynasty to the Ming dynasty, the Longquan region exported large quantities
+                    hundred years, from the Song dynasty to the Ming dynasty, the Longquan region exported large
+                    quantities
                     to Asian and European countries, writing a glorious page in the history of Chinese ceramics.
                 </p>
                 <p>
-                    Many types of ceramics were produced in the Longquan region. In the Song period, kilns began turning out
-                    porcelain patterned on the shapes and styles of ancient bronzes. This celadon container was excavated
-                    from the tomb of the Wang Shixian clan in China’s Gansu province. Dated to the Yuan period, the vessel
+                    Many types of ceramics were produced in the Longquan region. In the Song period, kilns began turning
+                    out
+                    porcelain patterned on the shapes and styles of ancient bronzes. This celadon container was
+                    excavated
+                    from the tomb of the Wang Shixian clan in China’s Gansu province. Dated to the Yuan period, the
+                    vessel
                     is modeled on the classical elegance of ancient yi, a type of bronze water container, but is not an
-                    outright copy of the prototype. Changes and innovations are apparent: compared to the bronzeware, the
-                    lines are simpler and the scale is somewhat smaller. The artifact’s graceful contours embody celadon’s
+                    outright copy of the prototype. Changes and innovations are apparent: compared to the bronzeware,
+                    the
+                    lines are simpler and the scale is somewhat smaller. The artifact’s graceful contours embody
+                    celadon’s
                     simple elegance.
                 </p>
             </div>
@@ -219,20 +226,21 @@
             if ($("#language>div").hasClass('languageE')) {
                 // 英文轉中文
                 $(".languageE").addClass('languageC').removeClass('languageE');
-                $('.details-ch').css({
+                $('.details-eng').css({
                     'display': 'none'
                 });
-                $('.details-eng').css({
+                $('.details-ch').css({
                     'display': 'block'
                 });
                 $('#audioEng')[0].play()
                 $('#audioDefault')[0].pause()
             } else {
                 $(".languageC").addClass('languageE').removeClass('languageC');
-                $('.details-eng').css({
+
+                $('.details-ch').css({
                     'display': 'none'
                 });
-                $('.details-ch').css({
+                $('.details-eng').css({
                     'display': 'block'
                 });
                 $('#audioEng')[0].pause()
