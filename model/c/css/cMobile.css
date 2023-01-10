@@ -162,14 +162,12 @@ html {
 
 .languageE {
     margin-top: 15px;
-    background: url("../../image/lanE.png") 0px 0px;
-    background-size: 330px;
+    background: url("../../image/lanE.png");
 }
 
 .languageC {
     margin-top: 15px;
-    background: url("../../image/lanc.png") 0px 0px;
-    background-size: 330px;
+    background: url("../../image/lanc.png");
 }
 
 #exitVR {
