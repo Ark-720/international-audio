@@ -224,49 +224,37 @@
 
         $("#language").click(function () {
             if ($("#language>div").hasClass('languageE')) {
+                // 英文轉中文
                 $(".languageE").addClass('languageC').removeClass('languageE');
+                $('.details-ch').css({
+                    'display': 'none'
+                });
+                $('.details-eng').css({
+                    'display': 'block'
+                });
+                $('#audioEng')[0].pause()
+                $('#audioDefault')[0].play()
             } else {
                 $(".languageC").addClass('languageE').removeClass('languageC');
+                $('.details-eng').css({
+                    'display': 'none'
+                });
+                $('.details-ch').css({
+                    'display': 'block'
+                });
+                $('#audioEng')[0].play()
+                $('#audioDefault')[0].pause()
             }
-            $('.details-ch').css({
-                'display': 'block'
-            });
-            $('.details-eng').css({
-                'display': 'none'
-            });
-            $('#audioEng')[0].play()
-            $('#audioDefault')[0].pause()
-            if (this.src.indexOf("tips.png") != -1) {
-                this.src = "image/close.png";
-                $(".details").css("display", "block")
-            } else {
-                this.src = "image/tips.png";
-                $(".details").css("display", "none")
-            }
+
         })
 
-        $("#languageC").click(function () {
-            if ($("#language>div").hasClass('languageE')) {
-                $(".languageE").addClass('languageC').removeClass('languageE');
-            } else {
-                $(".languageC").addClass('languageE').removeClass('languageC');
-            }
-            $('.details-ch').css({
-                'display': 'none'
-            });
-            $('.details-eng').css({
-                'display': 'block'
-            });
-            $('#audioEng')[0].pause()
-            $('#audioDefault')[0].play()
-            if (this.src.indexOf("tips.png") != -1) {
-                this.src = "image/close.png";
-                $(".details").css("display", "block")
-            } else {
-                this.src = "image/tips.png";
-                $(".details").css("display", "none")
-            }
-        });
+        if (this.src.indexOf("tips.png") != -1) {
+            this.src = "image/close.png";
+            $(".details").css("display", "block")
+        } else {
+            this.src = "image/tips.png";
+            $(".details").css("display", "none")
+        }
     </script>
 </body>
 
