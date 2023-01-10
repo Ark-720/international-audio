@@ -70,6 +70,9 @@
             <div id="labelbut">
                 <div class="but islabel"></div>
             </div>
+            <div id="language">
+                <div class="but languageC"></div>
+            </div>
             <div id="personal">
                 <div class="but personal"></div>
             </div>
@@ -194,25 +197,59 @@
         })
 
         $('.col2-btn').click(function () {
-            $('.details-ch').css({
+            $('.details-eng').css({
                 'display': 'block'
             });
-            $('.details-eng').css({
+            $('.details-ch').css({
                 'display': 'none'
             });
             $('#audioEng')[0].pause()
             $('#audioDefault')[0].play()
         });
         $('.col1-btn').click(function () {
-            $('.details-eng').css({
+            $('.details-ch').css({
                 'display': 'block'
             });
-            $('.details-ch').css({
+            $('.details-eng').css({
                 'display': 'none'
             });
             $('#audioEng')[0].play()
             $('#audioDefault')[0].pause()
         });
+
+        $("#language").click(function () {
+            if ($("#language>div").hasClass('languageE')) {
+                // 英文轉中文
+                $(".languageE").addClass('languageC').removeClass('languageE');
+                $('.details-ch').css({
+                    'display': 'none'
+                });
+                $('.details-eng').css({
+                    'display': 'block'
+                });
+                $('#audioEng')[0].play()
+                $('#audioDefault')[0].pause()
+            } else {
+                $(".languageC").addClass('languageE').removeClass('languageC');
+                $('.details-eng').css({
+                    'display': 'none'
+                });
+                $('.details-ch').css({
+                    'display': 'block'
+                });
+                $('#audioEng')[0].pause()
+                $('#audioDefault')[0].play()
+            }
+
+        })
+
+        if (this.src.indexOf("tips.png") != -1) {
+            this.src = "image/close.png";
+            $(".details").css("display", "block")
+        } else {
+            this.src = "image/tips.png";
+            $(".details").css("display", "none")
+        }
     </script>
 </body>
 
