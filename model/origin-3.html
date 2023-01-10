@@ -70,10 +70,7 @@
             <div id="labelbut">
                 <div class="but islabel"></div>
             </div>
-            <div id="languageE">
-                <div class="but languageE"></div>
-            </div>
-            <div id="languageC">
+            <div id="language">
                 <div class="but languageC"></div>
             </div>
             <div id="personal">
@@ -225,13 +222,12 @@
             $('#audioDefault')[0].pause()
         });
 
-        $("#languageE").click(function () {
-            $('#languageC').css({
-                'display': 'block'
-            });
-            $('#languageE').css({
-                'display': 'none'
-            });
+        $("#language").click(function () {
+            if ($("#language>div").hasClass('languageE')) {
+                $(".languageE").addClass('languageC').removeClass('languageE');
+            } else {
+                $(".languageC").addClass('languageE').removeClass('languageC');
+            }
             $('.details-eng').css({
                 'display': 'block'
             });
@@ -250,11 +246,16 @@
         })
 
         $("#languageC").click(function () {
-            $('#languageE').css({
-                'display': 'block'
-            });
-            $('#languageC').css({
+            if ($("#language>div").hasClass('languageE')) {
+                $(".languageE").addClass('languageC').removeClass('languageE');
+            } else {
+                $(".languageC").addClass('languageE').removeClass('languageC');
+            }
+            $('.details-eng').css({
                 'display': 'none'
+            });
+            $('.details-ch').css({
+                'display': 'block'
             });
             $('#audioEng')[0].pause()
             $('#audioDefault')[0].play()
