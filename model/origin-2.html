@@ -104,11 +104,11 @@
 
     </div>
     <div class="details">
-        <div class="details-ch">
+        <div class="details-eng">
             <div class="title">青玉帶鉤</div>
             <div style="width: 80%;margin: 5px auto;height: 50px;">
-                <div class="col1-btn">中文</div>
-                <div class="col2-btn">English</div>
+                <div class="col1-btn">English</div>
+                <div class="col2-btn">中文</div>
             </div>
             <div class="bianhao"><img src="image/id.png">S002</div>
             <div class="content">
@@ -133,11 +133,11 @@
             </div>
             <div style="height: 52px"></div>
         </div>
-        <div class="details-eng">
+        <div class="details-ch">
             <div class="title">The belt hook</div>
             <div style="width: 80%;margin: 5px auto;height: 50px;">
-                <div class="col1-btn">中文</div>
-                <div class="col2-btn">English</div>
+                <div class="col1-btn">English</div>
+                <div class="col2-btn">中文</div>
             </div>
             <div class="bianhao"><img src="image/id.png">S002</div>
             <div class="content">
@@ -181,7 +181,7 @@
     </audio>
 
     <script>
-        $('#audioDefault')[0].play();
+        $('#audioEng')[0].play();
 
         $(".tips>img").click(function () {
             if (this.src.indexOf("tips.png") != -1) {
@@ -193,7 +193,7 @@
             }
         })
 
-        $('.col1-btn').click(function () {
+        $('.col2-btn').click(function () {
             $('.details-ch').css({
                 'display': 'block'
             });
@@ -203,7 +203,7 @@
             $('#audioEng')[0].pause()
             $('#audioDefault')[0].play()
         });
-        $('.col2-btn').click(function () {
+        $('.col1-btn').click(function () {
             $('.details-eng').css({
                 'display': 'block'
             });
