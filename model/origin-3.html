@@ -6,7 +6,7 @@
         content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>永樂款銅鎏金度母像</title>
+    <title>demo 3</title>
     <script>
         var isMobile = function () {
             var sUserAgent = navigator.userAgent.toLowerCase(),
@@ -226,20 +226,21 @@
             if ($("#language>div").hasClass('languageE')) {
                 // 英文轉中文
                 $(".languageE").addClass('languageC').removeClass('languageE');
-                $('.details-ch').css({
+                $('.details-eng').css({
                     'display': 'none'
                 });
-                $('.details-eng').css({
+                $('.details-ch').css({
                     'display': 'block'
                 });
                 $('#audioEng')[0].play()
                 $('#audioDefault')[0].pause()
             } else {
                 $(".languageC").addClass('languageE').removeClass('languageC');
-                $('.details-eng').css({
+
+                $('.details-ch').css({
                     'display': 'none'
                 });
-                $('.details-ch').css({
+                $('.details-eng').css({
                     'display': 'block'
                 });
                 $('#audioEng')[0].pause()
