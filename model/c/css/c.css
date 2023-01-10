@@ -183,6 +183,15 @@ body,html{
     margin-top: 15px;
     background-image: url("../../image/rotate-off.png");
 }
+.languageE {
+    margin-top: 15px;
+    background: url("../../image/lanE.png");
+}
+
+.languageC {
+    margin-top: 15px;
+    background: url("../../image/lanc.png");
+}
 .Gyro{
     margin-top: 15px;
     background:url("../image/icons.png") -270px 0px;

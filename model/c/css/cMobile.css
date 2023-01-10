@@ -163,10 +163,12 @@ html {
 .languageE {
     margin-top: 15px;
     background: url("../../image/lanE.png");
+    background-size: contain;
 }
 
 .languageC {
     margin-top: 15px;
+    background-size: cover;
     background: url("../../image/lanc.png");
 }
 
