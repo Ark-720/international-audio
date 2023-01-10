@@ -164,7 +164,6 @@ html {
     margin-top: 15px;
     background: url("../../image/lanE.png");
     background-size: contain !important;
-    display: none;
 }
 
 .languageC {
