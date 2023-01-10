@@ -164,11 +164,12 @@ html {
     margin-top: 15px;
     background: url("../../image/lanE.png");
     background-size: contain;
+    display: none;
 }
 
 .languageC {
     margin-top: 15px;
-    background-size: cover;
+    background-size: contain;
     background: url("../../image/lanc.png");
 }
 
@@ -1256,7 +1257,7 @@ html {
     background: #9F8262;
 }
 
-.details {
+.details-ch {
     display: none;
 }
 
