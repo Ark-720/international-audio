@@ -1225,7 +1225,7 @@ $("#exitVR").click(function () {
     resetP();
 });
 var MtlBut = document.getElementById('mtlbut');
-var RecentMusic = document.getElementByClass('recentMusic');
+var RecentMusic = document.getElementByClass('recentMusic')[0];
 function swtichMusic(){
     if ($("#mtlbut>div").hasClass('ismtl')) {
         $(".ismtl").addClass('nomtl').removeClass('ismtl');
