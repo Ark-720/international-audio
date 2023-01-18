@@ -194,13 +194,15 @@
         touchScreen.addEventListener("touchstart", e => {
             e.preventDefault()
             console.log("touchstart event!")
-            $('#audioEng')[0].play();
+            $('#audioEng')[0].play()
+            $("#audioEng").addClass('recentMusic')
         })
 
         touchScreen.addEventListener("click", e => {
             e.preventDefault()
             console.log("click event!")
-            $('#audioEng')[0].play();
+            $('#audioEng')[0].play()
+            $("#audioEng").addClass('recentMusic')
         })
 
         $(".tips>img").click(function () {
@@ -269,13 +271,23 @@
             $(".details").css("display", "none")
         }
 
-        // if ($("#mtlbut>div").hasClass('ismtl')) {
-        //     $(".ismtl").addClass('nomtl').removeClass('ismtl');
-        //     sMusic.pause();
-        // } else {
-        //     $(".nomtl").addClass('ismtl').removeClass('nomtl');
-        //     sMusic.play();
-        // }
+        if ($("#mtlbut>div").hasClass('ismtl')) {
+            // 要暫停
+            if ($("#audioEng").hasClass('recentMusic')) {
+                $("#audioEng")[0].pause()
+            } else {
+                $("#audioDefault")[0].pause()
+            }
+            $(".ismtl").addClass('nomtl').removeClass('ismtl');
+        } else {
+            // 要開始
+            if ($("#audioEng").hasClass('recentMusic')) {
+                $("#audioEng")[0].play()
+            } else {
+                $("#audioDefault")[0].play()
+            }
+            $(".nomtl").addClass('ismtl').removeClass('nomtl');
+        }
     </script>
 </body>
 
