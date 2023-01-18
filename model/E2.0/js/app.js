@@ -1228,11 +1228,11 @@ var MtlBut = document.getElementById('mtlbut');
 function swtichMusic(){
     if ($("#mtlbut>div").hasClass('ismtl')) {
         $(".ismtl").addClass('nomtl').removeClass('ismtl');
-        $(".recentMusic")[0].pause();
+        $(".recentMusic").pause();
         sMusic.pause();
     } else {
         $(".nomtl").addClass('ismtl').removeClass('nomtl');
-        $(".recentMusic")[0].play();
+        $(".recentMusic").play();
         sMusic.play();
     }
 }
