@@ -191,6 +191,7 @@
     <script>
         $('#audioEng')[0].play();
         $('#audioEng').addClass('resentMusic')
+        // const audioEng = document.getElementsById("#audioEng");
 
         // const touchScreen = document.getElementsByTagName("body")[0];
 
@@ -228,7 +229,6 @@
             });
             $('#audioEng')[0].pause();
             $('#audioDefault')[0].play();
-            console.log("change CH");
         });
         $('.col1-btn').click(function () {
             $('.details-ch').css({
@@ -239,7 +239,6 @@
             });
             $('#audioEng')[0].play();
             $('#audioDefault')[0].pause();
-            console.log("change EN");
         });
 
         $("#language").click(function () {
@@ -299,6 +298,7 @@
             } else if ($("#audioDefault").hasClass('recentMusic')) {
                 $("#audioDefault")[0].play()
             }
+            
             $(".nomtl").addClass('ismtl').removeClass('nomtl');
         } else {
 
@@ -307,6 +307,7 @@
             } else if ($("#audioDefault").hasClass('recentMusic')) {
                 $("#audioDefault")[0].pause()
             }
+            
             $(".ismtl").addClass('nomtl').removeClass('ismtl');
         }
     </script>
