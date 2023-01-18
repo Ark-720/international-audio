@@ -191,34 +191,6 @@
     <script>
         $('#audioEng')[0].play();
         $('#audioEng').addClass('resentMusic')
-        // const audioEng = document.getElementsById("#audioEng");
-
-        // const touchScreen = document.getElementsByTagName("body")[0];
-
-        // let firstStarted = false;
-        // function startOnce() {
-        //     if (!firstStarted) firstStart();
-        // }
-
-        // startOnce();
-        // function firstStart() {
-        //     touchScreen.addEventListener("touchstart", e => {
-        //         console.log("touchstart event!");
-        //         $('#audioEng')[0].play();
-        //         $("#audioEng").addClass('recentMusic');
-        //     })
-        //     firstStarted = true;
-        // }
-
-        // $(".tips>img").click(function () {
-        //     if (this.src.indexOf("tips.png") != -1) {
-        //         this.src = "image/close.png";
-        //         $(".details").css("display", "block");
-        //     } else {
-        //         this.src = "image/tips.png";
-        //         $(".details").css("display", "none");
-        //     }
-        // })
 
         $('.col2-btn').click(function () {
             $('.details-eng').css({
@@ -255,7 +227,6 @@
                 $('#audioDefault')[0].pause()
                 $('#audioDefault').removeClass('resentMusic')
                 if ($("#audioEng").hasClass('recentMusic')) {
-                    console('keep')
                 }
                 else {
                     $('#audioEng').addClass('resentMusic')
@@ -273,7 +244,6 @@
                 $('#audioDefault')[0].play()
                 $('#audioEng').removeClass('resentMusic')
                 if ($("#audioDefault").hasClass('recentMusic')) {
-                    console('keep')
                 }
                 else {
                     $('#audioDefault').addClass('resentMusic')
@@ -291,25 +261,25 @@
         }
 
         // const MtlBut = document.getElementById('mtlbut');
-        if ($("#mtlbut>div").hasClass('ismtl')) {
-            // 要開始
-            if ($("#audioEng").hasClass('recentMusic')) {
-                $("#audioEng")[0].play()
-            } else if ($("#audioDefault").hasClass('recentMusic')) {
-                $("#audioDefault")[0].play()
-            }
+        // if ($("#mtlbut>div").hasClass('ismtl')) {
+        //     // 要開始
+        //     if ($("#audioEng").hasClass('recentMusic')) {
+        //         $("#audioEng")[0].play()
+        //     } else if ($("#audioDefault").hasClass('recentMusic')) {
+        //         $("#audioDefault")[0].play()
+        //     }
             
-            $(".nomtl").addClass('ismtl').removeClass('nomtl');
-        } else {
+        //     $(".nomtl").addClass('ismtl').removeClass('nomtl');
+        // } else {
 
-            if ($("#audioEng").hasClass('recentMusic')) {
-                $("#audioEng")[0].pause()
-            } else if ($("#audioDefault").hasClass('recentMusic')) {
-                $("#audioDefault")[0].pause()
-            }
+        //     if ($("#audioEng").hasClass('recentMusic')) {
+        //         $("#audioEng")[0].pause()
+        //     } else if ($("#audioDefault").hasClass('recentMusic')) {
+        //         $("#audioDefault")[0].pause()
+        //     }
             
-            $(".ismtl").addClass('nomtl').removeClass('ismtl');
-        }
+        //     $(".ismtl").addClass('nomtl').removeClass('ismtl');
+        // }
     </script>
 </body>
 

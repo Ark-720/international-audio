@@ -1225,15 +1225,17 @@ $("#exitVR").click(function () {
     resetP();
 });
 var MtlBut = document.getElementById('mtlbut');
-// function swtichMusic(){
-//     if ($("#mtlbut>div").hasClass('ismtl')) {
-//         $(".ismtl").addClass('nomtl').removeClass('ismtl');
-//         sMusic.pause();
-//     } else {
-//         $(".nomtl").addClass('ismtl').removeClass('nomtl');
-//         sMusic.play();
-//     }
-// }
+function swtichMusic(){
+    if ($("#mtlbut>div").hasClass('ismtl')) {
+        $(".ismtl").addClass('nomtl').removeClass('ismtl');
+        document.getElementsByClassName('recentMusic').pause();
+        sMusic.pause();
+    } else {
+        $(".nomtl").addClass('ismtl').removeClass('nomtl');
+        document.getElementsByClassName('recentMusic').play();
+        sMusic.play();
+    }
+}
 var LabelBut= document.getElementById("labelbut");
 LabelBut.addEventListener("click", function () {
     if ($("#labelbut>div").hasClass('islabel')) {
