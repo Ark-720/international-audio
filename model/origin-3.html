@@ -191,32 +191,32 @@
     <script>
         $('#audioEng')[0].play();
 
-        const touchScreen = document.getElementsByTagName("body")[0];
+        // const touchScreen = document.getElementsByTagName("body")[0];
 
-        let firstStarted = false;
-        function startOnce() {
-            if (!firstStarted) firstStart();
-        }
+        // let firstStarted = false;
+        // function startOnce() {
+        //     if (!firstStarted) firstStart();
+        // }
 
-        startOnce();
-        function firstStart() {
-            touchScreen.addEventListener("touchstart", e => {
-                console.log("touchstart event!");
-                $('#audioEng')[0].play();
-                $("#audioEng").addClass('recentMusic');
-            })
-            firstStarted = true;
-        }
+        // startOnce();
+        // function firstStart() {
+        //     touchScreen.addEventListener("touchstart", e => {
+        //         console.log("touchstart event!");
+        //         $('#audioEng')[0].play();
+        //         $("#audioEng").addClass('recentMusic');
+        //     })
+        //     firstStarted = true;
+        // }
 
-        $(".tips>img").click(function () {
-            if (this.src.indexOf("tips.png") != -1) {
-                this.src = "image/close.png";
-                $(".details").css("display", "block");
-            } else {
-                this.src = "image/tips.png";
-                $(".details").css("display", "none");
-            }
-        })
+        // $(".tips>img").click(function () {
+        //     if (this.src.indexOf("tips.png") != -1) {
+        //         this.src = "image/close.png";
+        //         $(".details").css("display", "block");
+        //     } else {
+        //         this.src = "image/tips.png";
+        //         $(".details").css("display", "none");
+        //     }
+        // })
 
         $('.col2-btn').click(function () {
             $('.details-eng').css({
