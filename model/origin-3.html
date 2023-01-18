@@ -227,6 +227,7 @@
                 $('#audioDefault')[0].pause()
                 $('#audioDefault').removeClass('resentMusic')
                 if ($("#audioEng").hasClass('recentMusic')) {
+                    $('#audioDefault').removeClass('resentMusic')
                 }
                 else {
                     $('#audioEng').addClass('resentMusic')
@@ -244,6 +245,7 @@
                 $('#audioDefault')[0].play()
                 $('#audioEng').removeClass('resentMusic')
                 if ($("#audioDefault").hasClass('recentMusic')) {
+                    $('#audioEng').removeClass('resentMusic')
                 }
                 else {
                     $('#audioDefault').addClass('resentMusic')
