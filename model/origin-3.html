@@ -189,7 +189,19 @@
     </audio>
 
     <script>
-        $('#audioEng')[0].play();
+        const touchScreen = document.getElementsByTagName("body")[0];
+
+        touchScreen.addEventListener("touchstart", e => {
+            e.preventDefault()
+            console.log("touchstart event!")
+            $('#audioEng')[0].play();
+        })
+
+        touchScreen.addEventListener("click", e => {
+            e.preventDefault()
+            console.log("click event!")
+            $('#audioEng')[0].play();
+        })
 
         $(".tips>img").click(function () {
             if (this.src.indexOf("tips.png") != -1) {
@@ -256,6 +268,14 @@
             this.src = "image/tips.png";
             $(".details").css("display", "none")
         }
+
+        // if ($("#mtlbut>div").hasClass('ismtl')) {
+        //     $(".ismtl").addClass('nomtl').removeClass('ismtl');
+        //     sMusic.pause();
+        // } else {
+        //     $(".nomtl").addClass('ismtl').removeClass('nomtl');
+        //     sMusic.play();
+        // }
     </script>
 </body>
 
