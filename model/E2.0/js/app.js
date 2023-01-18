@@ -1225,14 +1225,15 @@ $("#exitVR").click(function () {
     resetP();
 });
 var MtlBut = document.getElementById('mtlbut');
+var RecentMusic = document.getElementByClass('recentMusic');
 function swtichMusic(){
     if ($("#mtlbut>div").hasClass('ismtl')) {
         $(".ismtl").addClass('nomtl').removeClass('ismtl');
-        $(".recentMusic").pause();
+        RecentMusic.pause();
         sMusic.pause();
     } else {
         $(".nomtl").addClass('ismtl').removeClass('nomtl');
-        $(".recentMusic").play();
+        RecentMusic.play();
         sMusic.play();
     }
 }
