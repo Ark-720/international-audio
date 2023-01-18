@@ -189,10 +189,11 @@
     </audio>
 
     <script>
-        $('#audioEng')[0].play()
+        $('#audioEng')[0].play();
+
         const touchScreen = document.getElementsByTagName("body")[0];
 
-        let firstStarted = false
+        let firstStarted = false;
         function startOnce() {
             if (!firstStarted) firstStart();
         }
@@ -200,20 +201,20 @@
         startOnce();
         function firstStart() {
             touchScreen.addEventListener("touchstart", e => {
-                console.log("touchstart event!")
-                $('#audioEng')[0].play()
-                $("#audioEng").addClass('recentMusic')
+                console.log("touchstart event!");
+                $('#audioEng')[0].play();
+                $("#audioEng").addClass('recentMusic');
             })
-            firstStarted = true
+            firstStarted = true;
         }
 
         $(".tips>img").click(function () {
             if (this.src.indexOf("tips.png") != -1) {
                 this.src = "image/close.png";
-                $(".details").css("display", "block")
+                $(".details").css("display", "block");
             } else {
                 this.src = "image/tips.png";
-                $(".details").css("display", "none")
+                $(".details").css("display", "none");
             }
         })
 
@@ -224,8 +225,8 @@
             $('.details-ch').css({
                 'display': 'none'
             });
-            $('#audioEng')[0].pause()
-            $('#audioDefault')[0].play()
+            $('#audioEng')[0].pause();
+            $('#audioDefault')[0].play();
             console.log("change CH");
         });
         $('.col1-btn').click(function () {
@@ -235,8 +236,8 @@
             $('.details-eng').css({
                 'display': 'none'
             });
-            $('#audioEng')[0].play()
-            $('#audioDefault')[0].pause()
+            $('#audioEng')[0].play();
+            $('#audioDefault')[0].pause();
             console.log("change EN");
         });
 
