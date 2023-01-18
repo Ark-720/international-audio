@@ -254,34 +254,16 @@
 
         })
 
-        if (this.src.indexOf("tips.png") != -1) {
-            this.src = "image/close.png";
-            $(".details").css("display", "block")
-        } else {
-            this.src = "image/tips.png";
-            $(".details").css("display", "none")
-        }
+        $(".tips>img").click(function () {
+            if (this.src.indexOf("tips.png") != -1) {
+                this.src = "image/close.png";
+                $(".details").css("display", "block")
+            } else {
+                this.src = "image/tips.png";
+                $(".details").css("display", "none")
+            }
+        })
 
-        // const MtlBut = document.getElementById('mtlbut');
-        // if ($("#mtlbut>div").hasClass('ismtl')) {
-        //     // 要開始
-        //     if ($("#audioEng").hasClass('recentMusic')) {
-        //         $("#audioEng")[0].play()
-        //     } else if ($("#audioDefault").hasClass('recentMusic')) {
-        //         $("#audioDefault")[0].play()
-        //     }
-            
-        //     $(".nomtl").addClass('ismtl').removeClass('nomtl');
-        // } else {
-
-        //     if ($("#audioEng").hasClass('recentMusic')) {
-        //         $("#audioEng")[0].pause()
-        //     } else if ($("#audioDefault").hasClass('recentMusic')) {
-        //         $("#audioDefault")[0].pause()
-        //     }
-            
-        //     $(".ismtl").addClass('nomtl').removeClass('ismtl');
-        // }
     </script>
 </body>
 
