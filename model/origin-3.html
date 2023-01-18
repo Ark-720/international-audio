@@ -293,21 +293,21 @@
 
         // const MtlBut = document.getElementById('mtlbut');
         if ($("#mtlbut>div").hasClass('ismtl')) {
-            // 要暫停
-            if ($("#audioEng").hasClass('recentMusic')) {
-                $("#audioEng")[0].pause()
-            } else {
-                $("#audioDefault")[0].pause()
-            }
-            $(".ismtl").addClass('nomtl').removeClass('ismtl');
-        } else {
             // 要開始
             if ($("#audioEng").hasClass('recentMusic')) {
                 $("#audioEng")[0].play()
-            } else {
+            } else if ($("#audioDefault").hasClass('recentMusic')) {
                 $("#audioDefault")[0].play()
             }
             $(".nomtl").addClass('ismtl').removeClass('nomtl');
+        } else {
+
+            if ($("#audioEng").hasClass('recentMusic')) {
+                $("#audioEng")[0].pause()
+            } else if ($("#audioDefault").hasClass('recentMusic')) {
+                $("#audioDefault")[0].pause()
+            }
+            $(".ismtl").addClass('nomtl').removeClass('ismtl');
         }
     </script>
 </body>
