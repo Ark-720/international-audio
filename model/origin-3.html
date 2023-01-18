@@ -190,7 +190,7 @@
 
     <script>
         $('#audioEng')[0].play();
-        $('#audioEng').addClass('resentMusic')
+        $('#audioEng').addClass('recentMusic')
 
         $('.col2-btn').click(function () {
             $('.details-eng').css({
@@ -225,12 +225,12 @@
                 });
                 $('#audioEng')[0].play()
                 $('#audioDefault')[0].pause()
-                $('#audioDefault').removeClass('resentMusic')
+                $('#audioDefault').removeClass('recentMusic')
                 if ($("#audioEng").hasClass('recentMusic')) {
-                    $('#audioDefault').removeClass('resentMusic')
+                    $('#audioDefault').removeClass('recentMusic')
                 }
                 else {
-                    $('#audioEng').addClass('resentMusic')
+                    $('#audioEng').addClass('recentMusic')
                 }
             } else {
                 $(".languageC").addClass('languageE').removeClass('languageC');
@@ -243,12 +243,12 @@
                 });
                 $('#audioEng')[0].pause()
                 $('#audioDefault')[0].play()
-                $('#audioEng').removeClass('resentMusic')
+                $('#audioEng').removeClass('recentMusic')
                 if ($("#audioDefault").hasClass('recentMusic')) {
-                    $('#audioEng').removeClass('resentMusic')
+                    $('#audioEng').removeClass('recentMusic')
                 }
                 else {
-                    $('#audioDefault').addClass('resentMusic')
+                    $('#audioDefault').addClass('recentMusic')
                 }
             }
 
