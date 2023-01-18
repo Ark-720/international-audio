@@ -190,6 +190,7 @@
 
     <script>
         $('#audioEng')[0].play();
+        $('#audioEng').addClass('resentMusic')
 
         // const touchScreen = document.getElementsByTagName("body")[0];
 
@@ -253,6 +254,13 @@
                 });
                 $('#audioEng')[0].play()
                 $('#audioDefault')[0].pause()
+                $('#audioDefault').removeClass('resentMusic')
+                if ($("#audioEng").hasClass('recentMusic')) {
+                    console('keep')
+                }
+                else {
+                    $('#audioEng').addClass('resentMusic')
+                }
             } else {
                 $(".languageC").addClass('languageE').removeClass('languageC');
 
@@ -264,6 +272,13 @@
                 });
                 $('#audioEng')[0].pause()
                 $('#audioDefault')[0].play()
+                $('#audioEng').removeClass('resentMusic')
+                if ($("#audioDefault").hasClass('recentMusic')) {
+                    console('keep')
+                }
+                else {
+                    $('#audioDefault').addClass('resentMusic')
+                }
             }
 
         })
