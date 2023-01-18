@@ -189,21 +189,23 @@
     </audio>
 
     <script>
+        $('#audioEng')[0].play()
         const touchScreen = document.getElementsByTagName("body")[0];
 
-        touchScreen.addEventListener("touchstart", e => {
-            e.preventDefault()
-            console.log("touchstart event!")
-            $('#audioEng')[0].play()
-            $("#audioEng").addClass('recentMusic')
-        })
+        let firstStarted = false
+        function startOnce() {
+            if (!firstStarted) firstStart();
+        }
 
-        touchScreen.addEventListener("click", e => {
-            e.preventDefault()
-            console.log("click event!")
-            $('#audioEng')[0].play()
-            $("#audioEng").addClass('recentMusic')
-        })
+        startOnce();
+        function firstStart() {
+            touchScreen.addEventListener("touchstart", e => {
+                console.log("touchstart event!")
+                $('#audioEng')[0].play()
+                $("#audioEng").addClass('recentMusic')
+            })
+            firstStarted = true
+        }
 
         $(".tips>img").click(function () {
             if (this.src.indexOf("tips.png") != -1) {
@@ -224,6 +226,7 @@
             });
             $('#audioEng')[0].pause()
             $('#audioDefault')[0].play()
+            console.log("change CH");
         });
         $('.col1-btn').click(function () {
             $('.details-ch').css({
@@ -234,6 +237,7 @@
             });
             $('#audioEng')[0].play()
             $('#audioDefault')[0].pause()
+            console.log("change EN");
         });
 
         $("#language").click(function () {
@@ -271,6 +275,7 @@
             $(".details").css("display", "none")
         }
 
+        // const MtlBut = document.getElementById('mtlbut');
         if ($("#mtlbut>div").hasClass('ismtl')) {
             // 要暫停
             if ($("#audioEng").hasClass('recentMusic')) {
