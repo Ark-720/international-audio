@@ -198,9 +198,9 @@
     </div>
     <script type="text/javascript" src="E2.0/js/plugin/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="E2.0/js/plugin/touch-0.2.14.min.js"></script>
-    <script src="E2.0/js/libs/three1.js"></script>
+    <!-- <script src="E2.0/js/libs/three1.js"></script>
     <script src="E2.0/js/plugin/swiper.min.js"></script>
-    <script data-main="E2.0/js/preload" src="E2.0/js/plugin/require.js"></script>
+    <script data-main="E2.0/js/preload" src="E2.0/js/plugin/require.js"></script> -->
     <audio controls id="audioEng">
         <source
             src="https://ark-720.github.io/international-audio/model/Uploads/Models/1633/1535959169570/Image/longquan.m4a"
@@ -276,53 +276,54 @@
         });
 
         $("#language").click(function () {
-    if ($("#language>div").hasClass('languageE')) {
-        // 英文轉中文
-        $(".languageE").addClass('languageC').removeClass('languageE');
-        $('.details-eng').css({
-            'display': 'none'
-        });
-        $('.details-ch').css({
-            'display': 'block'
-        });
-        $('.details-jp').css({
-            'display': 'none'
-        });
-        $('#audioEng')[0].pause();
-        $('#audioDefault')[0].play();
-        $('#audioJp')[0].pause();
-    } else if ($("#language>div").hasClass('languageC')) {
-        // 中文轉日文
-        $(".languageC").addClass('languageJ').removeClass('languageC');
-        $('.details-ch').css({
-            'display': 'none'
-        });
-        $('.details-jp').css({
-            'display': 'block'
-        });
-        $('.details-eng').css({
-            'display': 'none'
-        });
-        $('#audioDefault')[0].pause();
-        $('#audioJp')[0].play();
-        $('#audioEng')[0].pause();
-    } else {
-        // 日文轉英文
-        $(".languageJ").addClass('languageE').removeClass('languageJ');
-        $('.details-jp').css({
-            'display': 'none'
-        });
-        $('.details-eng').css({
-            'display': 'block'
-        });
-        $('.details-ch').css({
-            'display': 'none'
-        });
-        $('#audioJp')[0].pause();
-        $('#audioEng')[0].play();
-        $('#audioDefault')[0].pause();
-    }
-});
+            if ($("#language>div").hasClass('languageE')) {
+                // 英文轉中文
+                $(".languageE").addClass('languageC').removeClass('languageE');
+                $('.details-eng').css({
+                    'display': 'none'
+                });
+                $('.details-jp').css({
+                    'display': 'none'
+                });
+                $('.details-ch').css({
+                    'display': 'block'
+                });
+                $('#audioEng')[0].play()
+                $('#audioDefault')[0].pause()
+                $( '#audioJp')[0].pause()
+            } else if($("#language>div").hasClass('languageC')) {
+                $(".languageC").addClass('languageJ').removeClass('languageC');
+
+                $('.details-ch').css({
+                    'display': 'none'
+                });
+                 $('.details-jp').css({
+                    'display': 'none'
+                });
+                $('.details-eng').css({
+                    'display': 'block'
+                });
+                $( '#audioJp')[0].pause()
+                $('#audioEng')[0].pause()
+                $('#audioDefault')[0].play()
+            } else{
+                 $(".languageJ").addClass('languageE').removeClass('languageJ');
+
+                $('.details-ch').css({
+                    'display': 'none'
+                });
+                $('.details-eng').css({
+                    'display': 'none'
+                });
+                $('.details-jp').css({
+                    'display': 'block'
+                });
+                $( '#audioJp')[0].play()
+                $('#audioEng')[0].pause()
+                $('#audioDefault')[0].pause()
+            }
+
+        })
 
         if (this.src.indexOf("tips.png") != -1) {
             this.src = "image/close.png";

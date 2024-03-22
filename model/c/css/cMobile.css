@@ -1263,7 +1263,9 @@ html {
 .details-eng {
     display: none;
 }
-
+.details-jp {
+    display: none;
+}
 .details {
     background: rgba(61, 49, 51, 1);
     opacity: 0.9;
