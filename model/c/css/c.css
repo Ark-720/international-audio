@@ -187,7 +187,10 @@ body,html{
     margin-top: 15px;
     background: url("../../image/lanE.png");
 }
-
+.languageJ{
+    margin-top: 15px;
+    background: url("../../image/lanJP.png");
+}
 .languageC {
     margin-top: 15px;
     background: url("../../image/lanc.png");
@@ -1133,7 +1136,7 @@ body,html{
     background: #9F8262;
     display: none;
 }
-.details-ch, .details-eng{
+.details-ch, .details-eng , .details-jp{
     background:rgba(61,49,51,1);
     /* opacity:0.9; */
     height: 100%;
@@ -1157,21 +1160,21 @@ body,html{
     width: 100%;
 }
 
-.details-ch>.title, .details-eng>.title{
+.details-ch>.title, .details-eng>.title, .details-jp>.title{
     padding-top: 26px;
     padding-left: 26px;
     padding-bottom: 11px;
     font-size: 21px;
     font-weight: bold;
 }
-.details-ch>.bianhao, .details-eng>.bianhao{
+.details-ch>.bianhao, .details-eng>.bianhao, .details-jp>.bianhao{
     padding-left: 26px;
 }
-.details-ch>.bianhao>img, .details-eng>.bianhao>img{
+.details-ch>.bianhao>img, .details-eng>.bianhao>img, .details-jp>.bianhao>img{
     width: 17px;
     margin-right: 7px;
 }
-.details-ch>.content, .details-eng>.content{
+.details-ch>.content, .details-eng>.content, .details-jp>.content{
     padding: 0 26px 0 26px;
     text-align: justify;
 }
@@ -1189,17 +1192,18 @@ body,html{
     position: relative;
     float: right;
     background: #9F8262;
-    border-radius: 10px;
+    border-radius: 10px; 
     padding: 10px;
     right: -8px;
 }
-
+.langMenu{
+    display:flex;
+    justify-content: space-between;
+}
 .col1-btn{
-    padding:10px 0;
-    left:-11px;
-    width: 45%;
+    flex:1;
+    padding:10px ;
     position: relative;
-    float: left;
     background: #9F8262;
     border-radius: 10px;
     height: 20px;
@@ -1208,19 +1212,31 @@ body,html{
 }
 
 .col2-btn{
-    width: 43%;
+    flex:1;
+    padding:10px ;
     position: relative;
-    float: right;
     background: #9F8262;
     border-radius: 10px;
     padding: 10px;
-    right: -8px;
     height: 20px;
     cursor: pointer;
     text-align: center;
+    margin-left:10px;
+}
+.col3-btn{
+    flex:1;
+    padding:10px ;
+    position: relative;
+    background: #9F8262;
+    border-radius: 10px;
+    padding: 10px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-left:10px;
 }
 
-.col1-btn:hover, .col2-btn:hover {
+.col1-btn:hover, .col2-btn:hover, .col3-btn:hover{
     background-color: #7a5e3f;
 }
 .details-eng{

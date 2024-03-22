@@ -67,6 +67,7 @@
             </div>
             <div id="mtlbut">
                 <div class="but ismtl"></div>
+
             </div>
             <div id="labelbut">
                 <div class="but islabel"></div>
@@ -110,9 +111,10 @@
     <div class="details">
         <div class="details-eng">
             <div class="title">龍泉窯青釉瓷匜</div>
-            <div style="width: 80%;margin: 5px auto;height: 50px;">
+            <div class="langMenu" style="width: 80%;margin: 5px auto;height: 50px;">
                 <div class="col1-btn">English</div>
                 <div class="col2-btn">中文</div>
+                <div class="col3-btn">日文</div>
             </div>
             <div class="bianhao"><img src="image/id.png">S001</div>
             <div class="content">
@@ -139,9 +141,10 @@
         </div>
         <div class="details-ch">
             <div class="title">Longquan ware</div>
-            <div style="width: 80%;margin: 5px auto;height: 50px;">
+            <div class="langMenu" style="width: 80%;margin: 5px auto;height: 50px;">
                 <div class="col1-btn">English</div>
                 <div class="col2-btn">中文</div>
+                <div class="col3-btn">日文</div>
             </div>
             <div class="bianhao"><img src="image/id.png">S001</div>
             <div class="content">
@@ -171,6 +174,27 @@
             </div>
             <div style="height: 52px"></div>
         </div>
+        <div class="details-jp">
+            <div class="title">龍泉窯青磁磁器</div>
+            <div class="langMenu" style="width: 80%;margin: 5px auto;height: 50px;">
+                <div class="col1-btn">English</div>
+                <div class="col2-btn">中文</div>
+                <div class="col3-btn">日文</div>
+            </div>
+            <div class="bianhao"><img src="image/id.png">S001</div>
+            <div class="content">
+                <p>
+                    龍泉窯は中国南部の浙江省にある青磁の名産地で、清らかで厚くしっとりとした緑色の釉薬で有名で、恵まれた地質環境により磁器焼成の長い歴史を持っています。宋から明にかけて水運が発達し、何百年にもわたって龍泉窯青磁はアジアやヨーロッパの国々に輸出され、中国陶磁の歴史に輝かしい１ページを刻みました。
+                </p>
+                <p>
+                    龍泉窯は器物の種類が豊富で、宋代以来の古崇敬・復古思想の影響を受け、古代青銅器をベースにした古青銅器の形をした器物が多く焼かれています。 この龍泉窯の青磁器は甘粛省の王世賢家の墓から出土し、元代のもので、その形状は古代の水器「匜」を模倣しており、基本的な形と直立で優雅な遺伝子を受け継いでいます。青銅器の原型をそのまま再現したものではありませんが、青銅器の原型製作により、仕様や装飾などにある程度の変化や工夫が加えられ、青銅器の複雑な線は簡略化され、青銅器の形状も簡略化されています。陶器は青銅器に似ています。
+                </p>
+                <p>
+                    青磁の素朴で上品なスタイルを反映した、小ぶりで優美なラインが特徴のペアです。 
+                </p>
+            </div>
+            <div style="height: 52px"></div>
+        </div>
     </div>
     <script type="text/javascript" src="E2.0/js/plugin/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="E2.0/js/plugin/touch-0.2.14.min.js"></script>
@@ -185,6 +209,11 @@
     <audio controls id="audioDefault">
         <source
             src="https://ark-720.github.io/international-audio/model/Uploads/Models/1633/1535959169570/Image/music.mp3"
+            type='audio/mp3'>
+    </audio>
+    <audio controls id="audioJp">
+        <source
+            src="https://ark-720.github.io/international-audio/model/Uploads/Models/1633/1535959169570/Image/longquan-jp.m4a"
             type='audio/mp3'>
     </audio>
 
@@ -208,7 +237,11 @@
             $('.details-ch').css({
                 'display': 'none'
             });
+            $('.details-jp').css({
+                'display': 'none'
+            })
             $('#audioEng')[0].pause()
+            $( '#audioJp')[0].pause()
             $('#audioDefault')[0].play()
         });
         $('.col1-btn').click(function () {
@@ -218,36 +251,78 @@
             $('.details-eng').css({
                 'display': 'none'
             });
+            $(' .details-jp').css({
+                'display': 'none'
+            })
+            
             $('#audioEng')[0].play()
+            $( '#audioJp')[0].pause()
+            $('#audioDefault')[0].pause()
+        });
+        $('.col3-btn').click(function () {
+            $('.details-ch').css({
+                'display': 'none'
+            });
+            $('.details-eng').css({
+                'display': 'none'
+            });
+            $('.details-jp').css({
+                'display': 'block'
+            })
+            
+            $('#audioEng')[0].pause()
+            $( '#audioJp')[0].play()
             $('#audioDefault')[0].pause()
         });
 
         $("#language").click(function () {
-            if ($("#language>div").hasClass('languageE')) {
-                // 英文轉中文
-                $(".languageE").addClass('languageC').removeClass('languageE');
-                $('.details-eng').css({
-                    'display': 'none'
-                });
-                $('.details-ch').css({
-                    'display': 'block'
-                });
-                $('#audioEng')[0].play()
-                $('#audioDefault')[0].pause()
-            } else {
-                $(".languageC").addClass('languageE').removeClass('languageC');
-
-                $('.details-ch').css({
-                    'display': 'none'
-                });
-                $('.details-eng').css({
-                    'display': 'block'
-                });
-                $('#audioEng')[0].pause()
-                $('#audioDefault')[0].play()
-            }
-
-        })
+    if ($("#language>div").hasClass('languageE')) {
+        // 英文轉中文
+        $(".languageE").addClass('languageC').removeClass('languageE');
+        $('.details-eng').css({
+            'display': 'none'
+        });
+        $('.details-ch').css({
+            'display': 'block'
+        });
+        $('.details-jp').css({
+            'display': 'none'
+        });
+        $('#audioEng')[0].pause();
+        $('#audioDefault')[0].play();
+        $('#audioJp')[0].pause();
+    } else if ($("#language>div").hasClass('languageC')) {
+        // 中文轉日文
+        $(".languageC").addClass('languageJ').removeClass('languageC');
+        $('.details-ch').css({
+            'display': 'none'
+        });
+        $('.details-jp').css({
+            'display': 'block'
+        });
+        $('.details-eng').css({
+            'display': 'none'
+        });
+        $('#audioDefault')[0].pause();
+        $('#audioJp')[0].play();
+        $('#audioEng')[0].pause();
+    } else {
+        // 日文轉英文
+        $(".languageJ").addClass('languageE').removeClass('languageJ');
+        $('.details-jp').css({
+            'display': 'none'
+        });
+        $('.details-eng').css({
+            'display': 'block'
+        });
+        $('.details-ch').css({
+            'display': 'none'
+        });
+        $('#audioJp')[0].pause();
+        $('#audioEng')[0].play();
+        $('#audioDefault')[0].pause();
+    }
+});
 
         if (this.src.indexOf("tips.png") != -1) {
             this.src = "image/close.png";
